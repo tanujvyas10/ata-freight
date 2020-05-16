@@ -1,4 +1,4 @@
-import {ADD_POST,GET_POSTS,GET_POST,DELETE_POST,POST_LOADING} from '../actions/types'
+import {ADD_LOAN,ADD_LOANS,GET_POST,DELETE_POST,LOAN_LOADING} from '../actions/types'
 
 
 const initialState = {
@@ -10,19 +10,19 @@ export default function(state = initialState, action){
 
 
     switch(action.type){
-      case ADD_POST:
+      case ADD_LOAN:
           return {
               ...state,
               loans:[action.payload, ...state.loans]
           }
-     case POST_LOADING:
+     case LOAN_LOADING:
          return {
              ...state,
              loans:[action.payload, ...state.loans]
          }  
        
 
-         case GET_POSTS:
+         case ADD_LOANS:
              return{
                  ...state,
                  loans:action.payload,

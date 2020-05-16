@@ -1,10 +1,10 @@
 import axios from 'axios'
 
 import {
-    ADD_POST ,
+    ADD_LOAN ,
     GET_ERRORS,
-    GET_POSTS,
-   POST_LOADING,
+    ADD_LOANS,
+   LOAN_LOADING,
     
 }
 from './types'
@@ -16,7 +16,7 @@ export const addPost = postData => dispatch =>{
     axios.post('/api/loans',postData)
     .then(res => 
         dispatch({
-            type:ADD_POST,
+            type:ADD_LOAN,
             payload:res.data
         })
         )
@@ -36,13 +36,13 @@ export const getPosts = () => dispatch =>{
     axios.get('/api/loans')
     .then(res => 
         dispatch({
-            type:GET_POSTS,
+            type:ADD_LOANS,
             payload:res.data
         })
         )
         .catch(err =>
             dispatch({
-                type:GET_POSTS,
+                type:ADD_LOANS,
                 payload:null
             })  
             )
@@ -52,7 +52,7 @@ export const getPosts = () => dispatch =>{
 //set loading state
  export const setPostLoading = ()=>{
      return {
-        type: POST_LOADING
+        type: LOAN_LOADING
      }
  }
 
