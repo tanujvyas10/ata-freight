@@ -1,0 +1,33 @@
+{
+  "name": "ata-freights",
+  "version": "1.0.0",
+  "description": "ata-feights-loans",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "client-install": "cd client && npm install",
+    "server": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "junat sayv",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.8.11",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
